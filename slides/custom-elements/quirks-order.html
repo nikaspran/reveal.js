@@ -1,0 +1,14 @@
+<template>
+  <h2>Does <i>not</i> have to be in order</h2>
+
+  <pre>
+    <code>
+      var el = document.createElement('x-tabs');
+      console.log(el.__proto__); // HTMLElement {...}
+      document.registerElement('x-tabs');
+      console.log(el.__proto__); // x-tabs {...}
+    </code>
+  </pre>
+
+  <h2>All works through the power of <span style="text-decoration: line-through">magic</span> maps</h2>
+</template>

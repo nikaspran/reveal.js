@@ -1,0 +1,15 @@
+<template>
+  <h2>Well, that's <i>simple</i>:</h2>
+
+  <pre>
+    <code>
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+      this.innerHTML = '<b>Hello, world!</b>';
+      };
+      document.registerElement('my-element', {
+      prototype: el
+      });
+    </code>
+  </pre>
+</template>

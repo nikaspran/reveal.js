@@ -1,0 +1,19 @@
+<template>
+  <h2>Everything inside is <em>hidden</em> by default</h2>
+  <pre>
+    <code>
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+      this.createShadowRoot().innerHTML = '<i>Hidden</i>'
+      };
+      document.registerElement('shadow-root', {prototype: el});
+    </code>
+  </pre>
+  <pre>
+    <code>
+      var shadowRoot = document.createElement('shadow-root');
+      document.body.appendChild(shadowRoot);
+      document.querySelector('i'); //null
+    </code>
+  </pre>
+</template>

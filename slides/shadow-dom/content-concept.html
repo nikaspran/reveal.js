@@ -1,0 +1,20 @@
+<template>
+  <h2>A way to <em>move</em> this into this</h2>
+
+  <pre>
+    <code>
+      <shadow-root>Some Markup</shadow-root>
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      el.createdCallback = function () {
+      var shadow = this.createShadowRoot();
+      shadow.innerHTML = '<content></content>';
+      };
+    </code>
+  </pre>
+
+  <!--TODO: arrows and circles-->
+</template>

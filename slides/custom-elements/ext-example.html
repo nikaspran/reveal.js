@@ -1,0 +1,18 @@
+<template>
+  <h2>Let’s make a <i>quacking</i> button</h2>
+
+  <pre>
+    <code>
+      var quackButton = Object.create(HTMLButtonElement.prototype);
+      quackButton.createdCallback = function () {
+      this.addEventListener('click', function () {
+      console.log('Quack Quack!');
+      });
+      };
+      document.registerElement('quack-button', {
+      prototype: quackButton,
+      extends: 'button'
+      });
+    </code>
+  </pre>
+</template>

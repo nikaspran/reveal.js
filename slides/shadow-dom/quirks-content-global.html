@@ -1,0 +1,19 @@
+<template>
+  <h2>&lt;content&gt; gets <em>global</em> styles</h2>
+
+  <pre>
+    <code>
+      <style>i {text-decoration:underline}</style>
+      <i>Shadow</i> <content></content>
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      <style>i {color:blue}</style>
+      <shadow-root><i>Not shadow</i></shadow-root>
+    </code>
+  </pre>
+
+  <!--TODO shadow not shadow -->
+</template>

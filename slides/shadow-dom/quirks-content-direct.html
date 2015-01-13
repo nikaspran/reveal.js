@@ -1,0 +1,19 @@
+<template>
+  <h2>&lt;content&gt; only works for <em>direct</em> children</h2>
+
+  <!--TODO: custom element-->
+  <div>✗</div>
+  <pre>
+    <code>
+      <content select="table tr"></content>
+    </code>
+  </pre>
+
+  <!--TODO: custom element-->
+  <div>✓</div>
+  <pre>
+    <code>
+      <content select="table"></content>
+    </code>
+  </pre>
+</template>

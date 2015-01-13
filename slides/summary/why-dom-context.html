@@ -1,0 +1,17 @@
+<template>
+  <h2>DOM as application <em>context</em></h2>
+
+  <pre>
+    <code>
+      <app-router>
+        <app-route path="/" import="home.html"></app-route>
+        <app-route path="/:category" import="category.html"></app-route>
+        <app-route path="*" import="404.html"></app-route>
+      </app-router>
+    </code>
+  </pre>
+
+  <pre>
+    <code>document.querySelector('app-router').go('/home')</code>
+  </pre>
+</template>

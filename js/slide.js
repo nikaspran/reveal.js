@@ -4,12 +4,13 @@
   var slide = Object.create(HTMLElement.prototype);
 
   slide.createdCallback = function () {
-    var link = document.createElement('link'), self = this;
+    var link = document.createElement('link'), self = this, root;
     link.setAttribute('rel', 'import');
     link.setAttribute('href', this.getAttribute('href'));
     link.onload = function () {
       var template = link.import.querySelector('template');
-      self.createShadowRoot().appendChild(document.importNode(template.content, true));
+      root = self.hasAttribute('no-shadow') ? self : self.createShadowRoot();
+      root.appendChild(document.importNode(template.content, true));
     };
 
     this.appendChild(link);

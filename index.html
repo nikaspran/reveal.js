@@ -61,74 +61,13 @@
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
 
-    <!-- TODO: import sections separately -->
     <section is="x-slide" href="slides/title.html"></section>
     <section is="x-slide" href="slides/contents.html"></section>
-    <link rel="import" href="slides/custom-elements/index.html">
-    <section is="x-slide" href="slides/templates/title.html"></section>
-    <section is="x-slide" href="slides/templates/cliche.html"></section>
-    <section is="x-slide" href="slides/templates/cliche-inner-html.html"></section>
-    <section is="x-slide" href="slides/templates/cliche-tedious.html"></section>
-    <section is="x-slide" href="slides/templates/html.html"></section>
-    <section is="x-slide" href="slides/templates/template-tag.html"></section>
-    <section is="x-slide" href="slides/templates/template-description.html"></section>
-    <section is="x-slide" href="slides/templates/cliche-template.html"></section>
-    <section is="x-slide" href="slides/templates/import-node-1.html"></section>
-    <section is="x-slide" href="slides/templates/import-node-2.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/title.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/encapsulation.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-title.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-bootstrap.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-date-picker-1.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-date-picker-2.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-date-picker-3.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-date-picker-4.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/world-date-picker-5.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/care.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/better-way-1.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/component-title.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/component-intent.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/component-actual.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/component-fix.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/swear.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/better-way-2.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/create-shadow-root.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/inside-hidden.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/inside-available.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/styling-context.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/content-title.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/content-concept.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/content-selectors.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/quirks-title.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/quirks-content-direct.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/quirks-content-global.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/quirks-inheritable.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/quirks-link-stylesheets.html"></section>
-    <section is="x-slide" href="slides/shadow-dom/more.html"></section>
-    <section is="x-slide" href="slides/html-imports/title.html"></section>
-    <section is="x-slide" href="slides/html-imports/versus.html"></section>
-    <section is="x-slide" href="slides/html-imports/css-js.html"></section>
-    <section is="x-slide" href="slides/html-imports/html-invisible.html"></section>
-    <section is="x-slide" href="slides/html-imports/blocks-rendering.html"></section>
-    <section is="x-slide" href="slides/html-imports/performance-title.html"></section>
-    <section is="x-slide" href="slides/html-imports/performance-vulcanize.html"></section>
-    <section is="x-slide" href="slides/html-imports/nice-to-have.html"></section>
-    <section is="x-slide" href="slides/summary/title.html"></section>
-    <section is="x-slide" href="slides/summary/why-title.html"></section>
-    <section is="x-slide" href="slides/summary/why-global-library.html"></section>
-    <section is="x-slide" href="slides/summary/why-sane-development.html"></section>
-    <section is="x-slide" href="slides/summary/why-interface-inventory.html"></section>
-    <section is="x-slide" href="slides/summary/why-dom-context.html"></section>
-    <section is="x-slide" href="slides/summary/frameworks-title.html"></section>
-    <section is="x-slide" href="slides/summary/frameworks-list.html"></section>
-    <section is="x-slide" href="slides/summary/when-title.html"></section>
-    <section is="x-slide" href="slides/summary/when-now.html"></section>
-    <section is="x-slide" href="slides/summary/when-now-asterisk.html"></section>
-    <section is="x-slide" href="slides/summary/when-native.html"></section>
-    <section is="x-slide" href="slides/summary/when-prepare.html"></section>
-    <section is="x-slide" href="slides/summary/end-title.html"></section>
-    <section is="x-slide" href="slides/summary/end-extension.html"></section>
-    <section is="x-slide" href="slides/summary/end-summary.html"></section>
+    <section is="x-slide" href="slides/custom-elements/index.html" no-shadow></section>
+    <section is="x-slide" href="slides/templates/index.html" no-shadow></section>
+    <section is="x-slide" href="slides/shadow-dom/index.html" no-shadow></section>
+    <section is="x-slide" href="slides/html-imports/index.html" no-shadow></section>
+    <section is="x-slide" href="slides/summary/index.html" no-shadow></section>
     <section is="x-slide" href="slides/thank-you.html"></section>
 
     <template>
@@ -587,7 +526,9 @@
         src: 'plugin/highlight/highlight.js', async: true, condition: function () {
         return !!document.querySelector('::shadow pre code');
       }, callback: function () {
-        hljs.initHighlightingOnLoad();
+        [].forEach.call(document.querySelectorAll('::shadow pre code'), function (codeBlock) {
+          hljs.highlightBlock(codeBlock);
+        })
       }
       },
       {src: 'plugin/zoom-js/zoom.js', async: true},

@@ -17,6 +17,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
   ::shadow h2 em, ::shadow h3 em {
     color: #F1662B;
     font-style: normal; }
+::shadow pre code {
+  text-align: left; }
 
 /*********************************************
  * GLOBAL STYLES

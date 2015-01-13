@@ -1,102 +1,102 @@
 <template>
   <h2>Here's what <em>fixed</em> it</h2>
   <pre>
-    <code>
-      #application-features {
+    <code class="sass">
+#application-features {
 
-      .features-section {
-      position: relative;
-      height: 493px;
-      overflow: hidden;
-      }
+  .features-section {
+    position: relative;
+    height: 493px;
+    overflow: hidden;
+  }
 
-      .table-features {
-      margin: 30px 40px 20px;
-      width: 826px;
+  .table-features {
+    margin: 30px 40px 20px;
+    width: 826px;
 
-      th {
+    th {
       border: 0;
       padding: 0;
 
       h4 {
-      margin: 0;
-      padding-bottom: 2px;
-      color: #363637;
-      font-family: $font-helvetica65;
-      font-size: 13px;
-      font-weight: normal;
+        margin: 0;
+        padding-bottom: 2px;
+        color: #363637;
+        font-family: $font-helvetica65;
+        font-size: 13px;
+        font-weight: normal;
       }
 
       p {
-      margin: 0;
-      font-family: $font-helvetica55;
-      font-size: 13px;
-      font-weight: normal;
+        margin: 0;
+        font-family: $font-helvetica55;
+        font-size: 13px;
+        font-weight: normal;
       }
-      }
+    }
 
-      th.feature-description h4 {
+    th.feature-description h4 {
       display: none;
-      }
+    }
 
-      th.base-package,
-      th.premium-package {
+    th.base-package,
+    th.premium-package {
       padding-right: 18px;
       padding-left: 18px;
       width: 100px;
       text-align: center;
       white-space: nowrap;
-      }
+    }
 
-      ...
+...
     </code>
   </pre>
   <pre>
     <code>
-      ...
+...
 
-      th.base-package p {
+    th.base-package p {
       color: #f9a339;
-      }
+    }
 
-      th.premium-package p {
+    th.premium-package p {
       color: #aa4dc8;
-      }
+    }
 
-      td {
+    td {
       border-top: 1px solid #cfcfcf;
       padding: 0;
 
       h4 {
-      margin: 0;
-      padding-top: 14px;
-      color: #363636;
-      font-family: $font-helvetica65;
-      font-size: 18px;
-      font-weight: normal;
+        margin: 0;
+        padding-top: 14px;
+        color: #363636;
+        font-family: $font-helvetica65;
+        font-size: 18px;
+        font-weight: normal;
       }
 
       p {
-      margin: 0;
-      padding-top: 12px;
-      padding-bottom: 15px;
-      width: 80%;
-      line-height: 20px;
-      color: #555555;
-      font-family: $font-helvetica55;
-      font-size: 14px;
-      font-weight: normal;
+        margin: 0;
+        padding-top: 12px;
+        padding-bottom: 15px;
+        width: 80%;
+        line-height: 20px;
+        color: #555555;
+        font-family: $font-helvetica55;
+        font-size: 14px;
+        font-weight: normal;
       }
 
       &.base-package,
       &.premium-package {
-      vertical-align: middle;
-      text-align: center;
-      color: #363636;
-      font-family: $font-helvetica55;
-      font-size: 18px;
+        vertical-align: middle;
+        text-align: center;
+        color: #363636;
+        font-family: $font-helvetica55;
+        font-size: 18px;
       }
-      ...
+...
     </code>
   </pre>
   <pre>
@@ -104,20 +104,20 @@
       ...
 
       &.checked {
-      vertical-align: middle;
-      text-align: center;
+        vertical-align: middle;
+        text-align: center;
       }
 
       &.checked.free {
-      background: inline-image('icon-checked-yellow.png') no-repeat center center;
+        background: inline-image('icon-checked-yellow.png') no-repeat center center;
       }
 
       &.checked.premium {
-      background: inline-image('icon-checked-purple.png') no-repeat center center;
+        background: inline-image('icon-checked-purple.png') no-repeat center center;
       }
-      }
-      }
-      }
+    }
+  }
+}
     </code>
   </pre>
   <div>

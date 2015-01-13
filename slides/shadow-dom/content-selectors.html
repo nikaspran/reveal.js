@@ -11,11 +11,11 @@
   </pre>
 
   <pre>
-    <code>
-      el.createdCallback = function () {
-      var shadow = this.createShadowRoot();
-      shadow.innerHTML = '<content select=".name"></content>';
-      };
+    <code class="js">
+el.createdCallback = function () {
+  var shadow = this.createShadowRoot();
+  shadow.innerHTML = '&lt;content select=".name"&gt;&lt;/content&gt;';
+};
     </code>
   </pre>
 </template>

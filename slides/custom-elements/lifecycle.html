@@ -2,17 +2,17 @@
   <h2>2009 called, they want their <i>callbacks</i> back</h2>
 
   <pre>
-    <code>
-      var myElement = Object.create(HTMLElement.prototype);
+    <code class="js">
+var myElement = Object.create(HTMLElement.prototype);
 
-      myElement.createdCallback = function () {...};
-      myElement.attachedCallback = function () {...};
-      myElement.detachedCallback = function () {...};
-      myElement.attributeChangedCallback = function () {...};
+myElement.createdCallback = function () {...};
+myElement.attachedCallback = function () {...};
+myElement.detachedCallback = function () {...};
+myElement.attributeChangedCallback = function () {...};
 
-      document.registerElement('my-element', {
-      prototype: myElement
-      });
+document.registerElement('my-element', {
+  prototype: myElement
+});
     </code>
   </pre>
 </template>

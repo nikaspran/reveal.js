@@ -1,11 +1,26 @@
 <template>
+  <style>
+    div {
+      margin-top: 60px;
+      display: inline-block;
+      width: 1600px;
+      text-align: end;
+    }
+
+    h3 {
+      font-size: 80px !important;
+    }
+  </style>
   <h2>But <em>available</em> if you need it!</h2>
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 document.querySelector('::shadow i');
 //&lt;i&gt;Hidden&lt;/i&gt;
   </code></pre>
   <!--@formatter:on-->
-  <h3><em>::shadow</em> - reach into the shadow boundary</h3>
-  <h3><em>/deep/</em> - ignore the shadow boundary</h3>
+  <div>
+    <h3><em>::shadow</em> - reach into the shadow boundary</h3>
+
+    <h3><em>/deep/</em> - ignore the shadow boundary</h3>
+  </div>
 </template>

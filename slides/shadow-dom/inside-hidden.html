@@ -1,7 +1,12 @@
 <template>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+  </style>
   <h2>Everything inside is <em>hidden</em> by default</h2>
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 var el = Object.create(HTMLElement.prototype);
 el.createdCallback = function () {
   this.createShadowRoot().innerHTML = '&lt;i&gt;Hidden&lt;/i&gt;'
@@ -10,7 +15,7 @@ document.registerElement('shadow-root', {prototype: el});
   </code></pre>
   <!--@formatter:on-->
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 var shadowRoot = document.createElement('shadow-root');
 document.body.appendChild(shadowRoot);
 document.querySelector('i'); //null

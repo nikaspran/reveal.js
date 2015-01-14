@@ -66,7 +66,7 @@ section.has-light-background {
   .font-roboto {
     font-family: 'Roboto', serif;
   }
-  h2, h3, li {
+  h2, h3, h4, li {
     color: $color-black;
     em {
       color: $color-orange-light;
@@ -82,8 +82,8 @@ section.has-light-background {
     }
   }
 
-  h1, h2, h3 {
-    font-weight: normal;
+  h1, h2, h3, h4 {
+    font-weight: 700;
     margin: 0;
     font-family: 'Lato', sans-serif;
   }

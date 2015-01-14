@@ -1,18 +1,47 @@
 <template>
-  <h3>there is</h3>
+  <style>
+    div {
+      position: relative;
+      display: inline-block;
+      width: 1300px;
+      height: 500px;
+    }
 
-  <h3>so much</h3>
+    h2, h3 {
+      font-family: 'Roboto', sans-serif !important;
+      position: absolute;
+    }
 
-  <h2><em>more</em></h2>
+    h3 {
+      font-size: 150px !important;
+    }
 
-  <ul>
-    <li>&lt;shadow&gt;</li>
-    <li>multiple shadow roots</li>
-    <li>style hooks</li>
-    <li>::content</li>
-    <li>insertion points</li>
-    <li>shadow DOM in JS</li>
-    <li>Element.getDistributedNodes()</li>
-    <li>Element.getDestinationInsertionPoints()</li>
-  </ul>
+    h2 {
+      font-size: 300px !important;
+    }
+
+    li {
+      list-style: none;
+      position: absolute;
+      font-size: 60px !important;
+    }
+  </style>
+  <div>
+    <h3 style="left: 150px; top: 0">there is</h3>
+
+    <h3 style="left: 700px; top: 50px">so much</h3>
+
+    <h2 style="left: 150px; top: 200px"><em>more</em></h2>
+
+    <ul>
+      <li style="left: -150px; top: 375px" class="color-gray-dark">&lt;shadow&gt;</li>
+      <li style="left: -100px; top: -25px" class="color-gray-dark">multiple shadow roots</li>
+      <li style="left: 1000px; top: 350px" class="color-gray-dark">style hooks</li>
+      <li style="left: 1200px; top: -25px" class="color-gray-dark">::content</li>
+      <li style="left: 900px; top: 450px" class="color-gray-dark">insertion points</li>
+      <li style="left: 700px; top: 25px" class="color-gray-dark">shadow DOM in JS</li>
+      <li style="left: 75px; top: 200px" class="color-gray-dark">Element.getDistributedNodes()</li>
+      <li style="left: 150px; top: 270px" class="color-gray-dark">Element.getDestinationInsertionPoints()</li>
+    </ul>
+  </div>
 </template>

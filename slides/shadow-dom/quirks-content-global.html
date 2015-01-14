@@ -1,15 +1,20 @@
 <template>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+  </style>
   <h2>&lt;content&gt; gets <em>global</em> styles</h2>
 
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="html">
 &lt;style&gt;i {text-decoration:underline}&lt;/style&gt;
 &lt;i&gt;Shadow&lt;/i&gt; &lt;content&gt;&lt;/content&gt;
   </code></pre>
   <!--@formatter:on-->
 
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="html">
 &lt;style&gt;i {color:blue}&lt;/style&gt;
 &lt;shadow-root&gt;&lt;i&gt;Not shadow&lt;/i&gt;&lt;/shadow-root&gt;
   </code></pre>

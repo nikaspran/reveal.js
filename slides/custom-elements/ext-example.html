@@ -1,8 +1,14 @@
 <template>
-  <h2>Let’s make a <i>quacking</i> button</h2>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+  </style>
+
+  <h2>Let’s make a <em>quacking</em> button</h2>
 
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 var quackButton = Object.create(HTMLButtonElement.prototype);
 quackButton.createdCallback = function () {
   this.addEventListener('click', function () {

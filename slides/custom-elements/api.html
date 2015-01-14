@@ -1,19 +1,20 @@
 <template>
-  <h2>We can create an <i>API</i></h2>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+  </style>
+  <h2>We can create an <em>API</em></h2>
   <!--@formatter:off-->
-  <pre><code>
-function onAttributeChange(name, oldValue, newValue) {
-  ...
-}
+  <pre><code class="js">
+function onAttributeChange(name, oldValue, newValue) {...}
 myElement.attributeChangedCallback = onAttributeChange;
   </code></pre>
   <!--@formatter:on-->
 
   <!--@formatter:off-->
-  <pre><code>
-myElement.doStuff = function () {
-  ...
-};
+  <pre><code class="js">
+myElement.doStuff = function () {...};
 document.querySelector('my-element').doStuff();
   </code></pre>
   <!--@formatter:on-->

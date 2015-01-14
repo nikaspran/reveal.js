@@ -1,9 +1,14 @@
 <template>
-  <h2>We can also use <i>new</i>:</h2>
+  <style>
+    code {
+      font-size: 60px !important;
+    }
+  </style>
+  <h2>We can also use <em>new</em>:</h2>
 
   <!--@formatter:off-->
-  <pre><code>
-var QuackButton = document.createElement('button', 'quack-button');
+  <pre><code class="js">
+var QuackButton = document.registerElement(...);
 
 document.body.appendChild(new QuackButton());
   </code></pre>

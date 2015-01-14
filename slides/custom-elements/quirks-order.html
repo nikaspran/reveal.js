@@ -1,8 +1,13 @@
 <template>
-  <h2>Does <i>not</i> have to be in order</h2>
+  <style>
+    code {
+      font-size: 60px !important;
+    }
+  </style>
+  <h2>Does <em>not</em> have to be in order</h2>
 
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 var el = document.createElement('x-tabs');
 console.log(el.__proto__); // HTMLElement {...}
 document.registerElement('x-tabs');

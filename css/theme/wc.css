@@ -322,9 +322,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: #0F0F0F; }
 ::shadow .font-roboto {
   font-family: 'Roboto', serif; }
-::shadow h2, ::shadow h3, ::shadow h4, ::shadow li {
+::shadow h2, ::shadow h3, ::shadow h4, ::shadow li, ::shadow q {
   color: #0F0F0F; }
-  ::shadow h2 em, ::shadow h3 em, ::shadow h4 em, ::shadow li em {
+  ::shadow h2 em, ::shadow h3 em, ::shadow h4 em, ::shadow li em, ::shadow q em {
     color: #F1662B;
     font-style: normal; }
 ::shadow pre {

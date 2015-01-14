@@ -1,16 +1,60 @@
 <template>
+  <style>
+    .centered {
+      margin-top: 50px;;
+      display: inline-block;
+      width: 1200px;
+      text-align: end;
+    }
+
+    .examples {
+      display: inline-block;
+      position: relative;
+      width: 450px;
+      height: 150px;
+    }
+
+    .examples img {
+      position: absolute;
+      height: 60px;
+    }
+
+    q {
+      margin-left: 100px;
+      margin-bottom: 50px;
+      font-family: 'Lato', sans-serif !important;
+      font-size: 50px !important;
+      text-align: start;
+      width: 600px;
+      display: inline-block;
+    }
+
+    h3 {
+      font-size: 67px !important;
+    }
+
+    a {
+      margin-top: 50px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  </style>
   <h2>Interface <em>inventory</em></h2>
-  <img src="../../res/inv-blue-open.png">
-  <img src="../../res/inv-orange.png">
-  <img src="../../res/inv-blue-edit.png">
-  <img src="../../res/inv-upgrade.png">
 
-  <!--TODO quote?-->
-  <q>comprehensive collection of the bits and pieces that make up your interface</q>
+  <div class="centered">
+    <div class="examples">
+      <img style="left: 0; top: 0;" src="../../res/inv-blue-open.png">
+      <img style="left: 0; bottom: 0;" src="../../res/inv-blue-edit.png">
+      <img style="right: 0; top: 0;" src="../../res/inv-upgrade.png">
+      <img style="right: 0; bottom: 0;" src="../../res/inv-orange.png">
+    </div>
 
-  <h3>have a <em>consistent</em> and <em>up-to-date</em> design</h3>
+    <q class="color-black">comprehensive collection of the bits and pieces that make up your interface</q>
 
-  <h3>for your app/team/organization</h3>
+    <h3>have a <em>consistent</em> and <em>up-to-date</em> design</h3>
 
-  <a href="http://bradfrost.com/blog/post/interface-inventory/">http://bradfrost.com/blog/post/interface-inventory/</a>
+    <h3>for your app/team/organization</h3>
+    <a class="color-orange-dark" target="_blank"
+       href="http://bradfrost.com/blog/post/interface-inventory/">http://bradfrost.com/blog/post/interface-inventory/</a>
+  </div>
 </template>

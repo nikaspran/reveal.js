@@ -1,13 +1,39 @@
 <template>
-  <h2>with <em>great power</em>...</h2>
+  <style>
+    h2 {
+      text-align: end;
+      margin-right: 300px !important;
+      font-size: 120px !important;
+    }
 
-  <!--TODO: quote?-->
-  <q>
-    “The simplest and most robust method to create custom elements that are <em>usable</em> and <em>accessible</em> is
-    to implement custom
-    elements as <strong><em>type extensions</em></strong>. This method provides a custom element with built in semantics
-    and interaction
-    behaviours which developers can use as a foundation.”
-  </q>
-  <caption>W3C Editor's Draft 7 January 2015</caption>
+    figure {
+      text-align: left;
+      width: 1300px;
+      display: inline-block;
+    }
+
+    q {
+      font-size: 45px !important;
+    }
+
+    figcaption {
+      text-align: right;
+    }
+
+    figcaption:before {
+      content: '-';
+      margin-right: .8em;
+    }
+  </style>
+  <h2 class="font-roboto">with <em>great power</em>...</h2>
+
+  <figure class="color-black">
+    <q>The simplest and most robust method to create custom elements that are <em>usable</em> and <em>accessible</em> is
+      to implement custom
+      elements as <strong><em>type extensions</em></strong>. This method provides a custom element with built in
+      semantics
+      and interaction
+      behaviours which developers can use as a foundation.</q>
+    <figcaption>W3C Editor's Draft 7 January 2015</figcaption>
+  </figure>
 </template>

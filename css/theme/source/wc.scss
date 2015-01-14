@@ -42,6 +42,12 @@ section.has-light-background {
 
 ::shadow {
   //TODO:replace with /deep/
+  .stroke-orange-light {
+    stroke: $color-orange-light;
+  }
+  .fill-orange-light {
+    fill: $color-orange-light;
+  }
   .color-orange-light {
     color: $color-orange-light;
   }

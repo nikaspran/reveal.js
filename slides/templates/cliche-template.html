@@ -1,11 +1,27 @@
 <template>
-  <h2>Cliché 2: <i>Electric</i> Boogaloo</h2>
+  <style>
+    code {
+      font-size: 40px !important;
+    }
+  </style>
+  <h2>Cliché 2: <em>Electric</em> Boogaloo</h2>
 
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="html">
 &lt;template id="tpl-hello-world"&gt;
   &lt;b&gt;Hello, World!&lt;/b&gt;
 &lt;/template&gt;
+  </code></pre>
+  <!--@formatter:on-->
+
+  <!--@formatter:off-->
+  <pre><code class="js">
+var el = Object.create(HTMLElement.prototype);
+el.createdCallback = function () {
+var template = document.querySelector('#tpl-hello-world');
+  this.appendChild(document.importNode(template.content, true));
+};
+document.registerElement('my-element', {prototype: el});
   </code></pre>
   <!--@formatter:on-->
 </template>

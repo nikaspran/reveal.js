@@ -1,7 +1,31 @@
 <template>
+  <style>
+    code {
+      font-size: 40px !important;
+      width: 60%;
+      float: left;
+      margin-left: 50px;
+    }
+    ul {
+      position: absolute;
+      left: 60%;
+      top: 30%;
+      margin-left: 100px;
+      list-style: none;
+      font-size: 80px !important;
+      text-align: left;
+      line-height: 1.5em;
+    }
+    li:before {
+      content: '&';
+      font-family: 'Lato', sans-serif;
+      margin: 0 .2em;
+    }
+  </style>
+
   <h2>But so, so <em>tedious</em></h2>
   <!--@formatter:off-->
-  <pre><code>
+  <pre><code class="js">
 this.innerHTML = '' +
   '&lt;table&gt;' +
   '&lt;tr&gt;' +
@@ -16,9 +40,11 @@ this.innerHTML = '' +
   </code></pre>
   <!--@formatter:on-->
 
-  <h3>&amp; <i>unreadable</i></h3>
+  <ul>
+    <li><em>unreadable</em></li>
 
-  <h3>&amp; <i>bland</i></h3>
+    <li><em>bland</em></li>
 
-  <h3>&amp; <i>buggy</i></h3>
+    <li><em>buggy</em></li>
+  </ul>
 </template>

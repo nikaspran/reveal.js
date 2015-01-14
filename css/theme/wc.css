@@ -306,6 +306,10 @@
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
+::shadow .stroke-orange-light {
+  stroke: #F1662B; }
+::shadow .fill-orange-light {
+  fill: #F1662B; }
 ::shadow .color-orange-light {
   color: #F1662B; }
 ::shadow .color-orange-dark {

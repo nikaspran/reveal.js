@@ -4,6 +4,7 @@
 // ---------------------------------------------
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import "../template/fonts";
 
 $color-orange-light: #F1662B;
 $color-orange-dark: #DC4724;
@@ -56,15 +57,36 @@ section.has-light-background {
   .color-black {
     color: $color-black;
   }
-  h2, h3 {
+  .font-roboto {
+    font-family: 'Roboto', serif;
+  }
+  h2, h3, li {
     color: $color-black;
     em {
       color: $color-orange-light;
       font-style: normal;
     }
   }
-  pre code {
-    text-align: left;
+  pre {
+    margin: 0;
+    code {
+      text-align: left;
+      font-family: "Source Code Pro", monospace;
+      font-size: 70px;
+    }
+  }
+
+  h1, h2, h3 {
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  h2 {
+    font-size: 90px;
+
+    & ~ pre {
+      margin-top: 40px;
+    }
   }
 }
 

@@ -502,6 +502,7 @@
     progress: true,
     history: true,
     center: true,
+    width: 1920,
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -527,6 +528,7 @@
         return !!document.querySelector('::shadow pre code');
       }, callback: function () {
         [].forEach.call(document.querySelectorAll('::shadow pre code'), function (codeBlock) {
+          codeBlock.innerHTML = codeBlock.innerHTML.trim();
           hljs.highlightBlock(codeBlock);
         })
       }

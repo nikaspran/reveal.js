@@ -1,21 +1,21 @@
 <template>
   <h2>You can use <em>selectors</em>, too!</h2>
 
-  <pre>
-    <code class="html">
+  <!--@formatter:off-->
+  <pre><code>
 &lt;shadow-root&gt;
   &lt;span class="name"&gt;John Smith&lt;/span&gt;
   &lt;span class="email"&gt;js@example.com&lt;/span&gt;
 &lt;/shadow-root&gt;
-    </code>
-  </pre>
+  </code></pre>
+  <!--@formatter:on-->
 
-  <pre>
-    <code class="js">
+  <!--@formatter:off-->
+  <pre><code>
 el.createdCallback = function () {
   var shadow = this.createShadowRoot();
   shadow.innerHTML = '&lt;content select=".name"&gt;&lt;/content&gt;';
 };
-    </code>
-  </pre>
+  </code></pre>
+  <!--@formatter:on-->
 </template>

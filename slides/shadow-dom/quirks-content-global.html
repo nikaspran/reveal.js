@@ -1,19 +1,19 @@
 <template>
   <h2>&lt;content&gt; gets <em>global</em> styles</h2>
 
-  <pre>
-    <code class="html">
+  <!--@formatter:off-->
+  <pre><code>
 &lt;style&gt;i {text-decoration:underline}&lt;/style&gt;
 &lt;i&gt;Shadow&lt;/i&gt; &lt;content&gt;&lt;/content&gt;
-    </code>
-  </pre>
+  </code></pre>
+  <!--@formatter:on-->
 
-  <pre>
-    <code class="html">
+  <!--@formatter:off-->
+  <pre><code>
 &lt;style&gt;i {color:blue}&lt;/style&gt;
 &lt;shadow-root&gt;&lt;i&gt;Not shadow&lt;/i&gt;&lt;/shadow-root&gt;
-    </code>
-  </pre>
+  </code></pre>
+  <!--@formatter:on-->
 
   <!--TODO shadow not shadow -->
 </template>

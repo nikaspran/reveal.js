@@ -1,11 +1,41 @@
 <template>
-  <h2>Web Components are</h2>
+  <style>
+    :host {
+      /*height: 100vh;*/
+    }
 
-  <div>{</div>
+    span {
+      font-family: 'Lato', sans-serif;
+      font-size: 400px;
+      vertical-align: middle;
+      position: relative;
+      top: -22px;
+      left: 27px;
+    }
+
+    h2 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 70px;
+    }
+
+    ul {
+      vertical-align: middle;
+      display: inline-block;
+      list-style: none;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 60px;
+      text-align: left;
+    }
+  </style>
+  <h2 class="color-orange-dark">Web Components are</h2>
+
+  <span class="color-gray-dark">{</span>
+
   <ul>
-    <li>Custom Elements</li>
-    <li>Templates</li>
-    <li>Shadow DOM</li>
-    <li>HTML Imports</li>
+    <li><em>Custom Elements</em></li>
+    <li><em>Templates</em></li>
+    <li><em>Shadow DOM</em></li>
+    <li><em>HTML Imports</em></li>
   </ul>
 </template>

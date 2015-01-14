@@ -1,8 +1,8 @@
 <template>
   <h2>Let’s make a <i>quacking</i> button</h2>
 
-  <pre>
-    <code class="js">
+  <!--@formatter:off-->
+  <pre><code>
 var quackButton = Object.create(HTMLButtonElement.prototype);
 quackButton.createdCallback = function () {
   this.addEventListener('click', function () {
@@ -13,6 +13,6 @@ document.registerElement('quack-button', {
   prototype: quackButton,
   extends: 'button'
 });
-    </code>
-  </pre>
+  </code></pre>
+  <!--@formatter:on-->
 </template>

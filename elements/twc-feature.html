@@ -1,10 +1,16 @@
+<template id="common">
+  <style>
+    :host {
+      font-size: 150px;
+      display: inline-block;
+      font-weight: 700;
+    }
+  </style>
+</template>
 <template id="false">
   <style>
     :host {
       color: #dc4724;
-      font-size: 150px;
-      display: inline-block;
-      font-weight: 700;
     }
   </style>
   ✗
@@ -13,9 +19,14 @@
   <style>
     :host {
       color: #6a8759;
-      font-size: 150px;
-      display: inline-block;
-      font-weight: 700;
+    }
+  </style>
+  ✓
+</template>
+<template id="maybe">
+  <style>
+    :host {
+      color: #FFDC00;
     }
   </style>
   ✓
@@ -28,9 +39,9 @@
     var feature = Object.create(HTMLElement.prototype), owner = document.currentScript.ownerDocument;
 
     feature.createdCallback = function () {
-      var status = this.getAttribute('status'),
-        template = owner.querySelector(status === 'false' ? '#false' : '#true');
-      this.createShadowRoot().appendChild(document.importNode(template.content, true));
+      var root = this.createShadowRoot(), template = owner.querySelector('#' + this.getAttribute('status'));
+      root.appendChild(document.importNode(owner.querySelector('#common').content, true));
+      root.appendChild(document.importNode(template.content, true));
     };
 
     document.registerElement('twc-feature', {prototype: feature});

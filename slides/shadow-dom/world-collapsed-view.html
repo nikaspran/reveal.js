@@ -1,0 +1,44 @@
+<template>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+
+    collapsed-datepicker {
+      display: inline-block;
+      vertical-align: middle;
+      transform: scale(1.6, 1.6);
+    }
+
+    img {
+      height: 150px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 150px;
+    }
+
+    h2 {
+      margin-bottom: 100px !important;
+    }
+  </style>
+  <h2>Here's that <em>datepicker</em> on shadow DOM:</h2>
+  <collapsed-datepicker></collapsed-datepicker>
+  <img src="../../res/screen-date-picker-collapsed.png">
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot(), style = document.createElement('style'),
+          datePicker = document.createElement('input'), pikaday, container = document.createElement('div');
+        style.innerHTML = '@import "../../bower_components/pikaday/css/pikaday.css";';
+        container.setAttribute('style', 'width: 257px; height: 216px; margin: 0 auto;')
+        shadowRoot.appendChild(style);
+        shadowRoot.appendChild(datePicker);
+        shadowRoot.appendChild(container);
+        pikaday = new Pikaday({field: datePicker, container: container, bound: false});
+        pikaday.show();
+      };
+      document.registerElement('collapsed-datepicker', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

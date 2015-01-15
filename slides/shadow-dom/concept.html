@@ -1,0 +1,29 @@
+<template>
+  <style>
+    div {
+      text-align: end;
+      width: 1300px;
+      display: inline-block;
+    }
+
+    h2 {
+      font-size: 90px !important;
+      font-family: 'Roboto', serif !important;
+    }
+
+    code {
+      margin-top: 100px !important;
+    }
+  </style>
+  <div>
+    <h2>a way to <em>separate</em></h2>
+
+    <h2>the innards of components</h2>
+
+    <h2>from the global document</h2>
+  </div>
+
+  <!--@formatter:off-->
+  <pre><code class="js">var shadowRoot = element.createShadowRoot();</code></pre>
+  <!--@formatter:on-->
+</template>

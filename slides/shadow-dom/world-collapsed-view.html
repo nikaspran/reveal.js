@@ -1,7 +1,8 @@
 <template>
   <style>
     code {
-      font-size: 45px !important;
+      margin-top: 110px;
+      font-size: 60px !important;
     }
 
     collapsed-datepicker {
@@ -14,16 +15,21 @@
       height: 150px;
       display: inline-block;
       vertical-align: middle;
-      margin-left: 150px;
+      margin-left: 200px;
     }
 
     h2 {
-      margin-bottom: 100px !important;
+      margin-bottom: 70px !important;
     }
   </style>
   <h2>Here's that <em>datepicker</em> on shadow DOM:</h2>
   <collapsed-datepicker></collapsed-datepicker>
   <img src="../../res/screen-date-picker-collapsed.png">
+
+  <!--@formatter:off-->
+  <pre><code class="js">document.querySelectorAll('button').length //0</code></pre>
+  <!--@formatter:on-->
+
   <script>
     (function (document) {
       var el = Object.create(HTMLElement.prototype);

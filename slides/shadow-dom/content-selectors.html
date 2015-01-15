@@ -1,26 +1,45 @@
 <template>
   <style>
     code {
-      font-size: 45px !important;
+      font-size: 40px !important;
+    }
+
+    name-tag {
+      display: inline-block;
+      font-size: 70px;
     }
   </style>
   <h2>You can use <em>selectors</em>, too!</h2>
 
   <!--@formatter:off-->
   <pre><code class="html">
-&lt;shadow-root&gt;
+&lt;name-tag&gt;
   &lt;span class="name"&gt;John Smith&lt;/span&gt;
   &lt;span class="email"&gt;js@example.com&lt;/span&gt;
-&lt;/shadow-root&gt;
+&lt;/name-tag&gt;
   </code></pre>
   <!--@formatter:on-->
 
+  <h4 style="font-size: 80px;"><em>+</em></h4>
+
   <!--@formatter:off-->
-  <pre><code class="js">
-el.createdCallback = function () {
-  var shadow = this.createShadowRoot();
-  shadow.innerHTML = '&lt;content select=".name"&gt;&lt;/content&gt;';
-};
-  </code></pre>
+  <pre><code class="js">shadowRoot.innerHTML = 'Hi, &lt;content select=".name"&gt;&lt;/content&gt;!';</code></pre>
   <!--@formatter:on-->
+
+  <h4 style="font-size: 80px;"><em>=</em></h4>
+
+  <name-tag class="color-black">
+    <span class="name">John Smith</span>
+    <span class="email">js@example.com</span>
+  </name-tag>
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.innerHTML = 'Hi, <content select=".name"></content>!';
+      };
+      document.registerElement('name-tag', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
 </template>

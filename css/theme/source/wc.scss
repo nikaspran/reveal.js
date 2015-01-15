@@ -95,9 +95,12 @@ section.has-light-background {
   h2 {
     font-size: 90px;
 
-    & ~ pre {
+    & + pre {
       margin-top: 40px;
     }
+  }
+  pre + pre {
+    margin-top: 40px;
   }
 }
 

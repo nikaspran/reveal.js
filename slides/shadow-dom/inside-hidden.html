@@ -1,24 +1,14 @@
 <template>
   <style>
     code {
-      font-size: 45px !important;
+      font-size: 70px !important;
     }
   </style>
-  <h2>Everything inside is <em>hidden</em> by default</h2>
+  <h2>Everything inside is <em>unselectable</em> by default</h2>
   <!--@formatter:off-->
-  <pre><code class="js">
-var el = Object.create(HTMLElement.prototype);
-el.createdCallback = function () {
-  this.createShadowRoot().innerHTML = '&lt;i&gt;Hidden&lt;/i&gt;'
-};
-document.registerElement('shadow-root', {prototype: el});
-  </code></pre>
+  <pre><code class="js">shadowRoot.innerHTML = '&lt;i&gt;Hidden&lt;/i&gt;';</code></pre>
   <!--@formatter:on-->
   <!--@formatter:off-->
-  <pre><code class="js">
-var shadowRoot = document.createElement('shadow-root');
-document.body.appendChild(shadowRoot);
-document.querySelector('i'); //null
-  </code></pre>
+  <pre><code class="js">document.querySelector('i'); //null</code></pre>
   <!--@formatter:on-->
 </template>

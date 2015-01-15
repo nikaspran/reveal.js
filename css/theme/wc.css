@@ -342,8 +342,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   font-family: 'Lato', sans-serif; }
 ::shadow h2 {
   font-size: 90px; }
-  ::shadow h2 ~ pre {
+  ::shadow h2 + pre {
     margin-top: 40px; }
+::shadow pre + pre {
+  margin-top: 40px; }
 
 /*********************************************
  * GLOBAL STYLES

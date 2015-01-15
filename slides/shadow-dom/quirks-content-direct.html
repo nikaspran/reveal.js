@@ -1,19 +1,32 @@
 <template>
+  <style>
+    twc-feature {
+      margin-right: 50px;
+      vertical-align: middle;
+    }
+
+    pre {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1600px;
+    }
+  </style>
   <h2>&lt;content&gt; only works for <em>direct</em> children</h2>
 
-  <!--TODO: custom element-->
-  <div>✗</div>
-  <!--@formatter:off-->
-  <pre><code class="html">
+  <div>
+    <twc-feature status="false"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">
 &lt;content select="table tr"&gt;&lt;/content&gt;
-  </code></pre>
-  <!--@formatter:on-->
-
-  <!--TODO: custom element-->
-  <div>✓</div>
-  <!--@formatter:off-->
-  <pre><code class="html">
+    </code></pre>
+    <!--@formatter:on-->
+  </div>
+  <div>
+    <twc-feature status="true"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">
 &lt;content select="table"&gt;&lt;/content&gt;
-  </code></pre>
-  <!--@formatter:on-->
+    </code></pre>
+    <!--@formatter:on-->
+  </div>
 </template>

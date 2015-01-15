@@ -1,0 +1,38 @@
+<template id="false">
+  <style>
+    :host {
+      color: #dc4724;
+      font-size: 150px;
+      display: inline-block;
+      font-weight: 700;
+    }
+  </style>
+  ✗
+</template>
+<template id="true">
+  <style>
+    :host {
+      color: #6a8759;
+      font-size: 150px;
+      display: inline-block;
+      font-weight: 700;
+    }
+  </style>
+  ✓
+</template>
+
+<script>
+  (function () {
+    'use strict';
+
+    var feature = Object.create(HTMLElement.prototype), owner = document.currentScript.ownerDocument;
+
+    feature.createdCallback = function () {
+      var status = this.getAttribute('status'),
+        template = owner.querySelector(status === 'false' ? '#false' : '#true');
+      this.createShadowRoot().appendChild(document.importNode(template.content, true));
+    };
+
+    document.registerElement('twc-feature', {prototype: feature});
+  }());
+</script>

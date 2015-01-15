@@ -333,8 +333,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
     text-align: left;
     font-family: "Source Code Pro", monospace;
     font-size: 70px; }
+::shadow h1 {
+  font-weight: 400; }
+::shadow h2, ::shadow h3, ::shadow h4 {
+  font-weight: 700; }
 ::shadow h1, ::shadow h2, ::shadow h3, ::shadow h4 {
-  font-weight: 700;
   margin: 0;
   font-family: 'Lato', sans-serif; }
 ::shadow h2 {

@@ -9,13 +9,9 @@
 
   <!--@formatter:off-->
   <pre><code>
-var el = Object.create(HTMLElement.prototype);
-el.createdCallback = function () {
+myElement.createdCallback = function () {
   this.innerHTML = '&lt;b&gt;Hello, world!&lt;/b&gt;';
 };
-document.registerElement('my-element', {
-  prototype: el
-});
   </code></pre>
   <!--@formatter:on-->
 </template>

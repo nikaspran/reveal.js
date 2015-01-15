@@ -1,11 +1,22 @@
 <template>
-  <h2>Takes a document <em>fragment</em>:</h2>
+  <style>
+    twc-arrow {
+      position: absolute;
+      top: 50px;
+      left: 890px;
+      transform-origin: 50% 50%;
+      transform: rotate(-135deg) scale(.7, .8);
+    }
+  </style>
+  <div style="position: relative">
+    <h2>Takes a document <em>fragment</em>:</h2>
 
-  <!--@formatter:off-->
-  <pre><code class="js">document.importNode(node, deep);</code></pre>
-  <!--@formatter:on-->
+    <!--@formatter:off-->
+    <pre><code class="js">document.importNode(node, deep);</code></pre>
+    <!--@formatter:on-->
 
-  <h2 style="margin-top: 50px">Use with <strong>template</strong><em>.content</em></h2>
+    <h2 style="margin-top: 50px">Use with <strong>template</strong><em>.content</em></h2>
 
-  <!--TODO: arrow-->
+    <twc-arrow></twc-arrow>
+  </div>
 </template>

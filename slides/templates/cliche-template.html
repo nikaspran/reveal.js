@@ -16,12 +16,10 @@
 
   <!--@formatter:off-->
   <pre><code class="js">
-var el = Object.create(HTMLElement.prototype);
 el.createdCallback = function () {
-var template = document.querySelector('#tpl-hello-world');
+  var template = document.querySelector('#tpl-hello-world');
   this.appendChild(document.importNode(template.content, true));
 };
-document.registerElement('my-element', {prototype: el});
   </code></pre>
   <!--@formatter:on-->
 </template>

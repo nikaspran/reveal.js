@@ -12,7 +12,7 @@
   </style>
   <h2>Styling does <em>not</em> leak outside shadow DOM</h2>
   <!--@formatter:off-->
-  <pre><code class="js">
+  <pre><code class="html">
 shadowRoot.innerHTML = '' +
     '&lt;style&gt;* {color: red !important;}&lt;/style&gt;' +
     '&lt;span&gt;Only this text is red!&lt;/span&gt;';

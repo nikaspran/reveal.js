@@ -1,21 +1,19 @@
 {
-  "name": "reveal.js",
-  "version": "3.0.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "Web Components: The (near) Future of Web Development",
+  "version": "1.0.0",
+  "description": "An introduction to Web Components",
+  "homepage": "http://nikas.praninskas.com",
   "scripts": {
     "test": "grunt test",
-    "start": ""
+    "start": "grunt serve"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Nikas Praninskas",
+    "web": "http://nikas.praninskas.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/nikaspran/talk-web-components"
   },
   "engines": {
     "node": "~0.10.0"
@@ -42,7 +40,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      "url": "https://github.com/nikaspran/talk-web-components/blob/master/LICENSE"
     }
   ]
 }

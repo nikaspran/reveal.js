@@ -36,7 +36,7 @@
       el.createdCallback = function () {
         var shadowRoot = this.createShadowRoot(), style = document.createElement('style'),
           datePicker = document.createElement('input'), pikaday, container = document.createElement('div');
-        style.innerHTML = '@import "../../bower_components/pikaday/css/pikaday.css";';
+        style.innerHTML = '@import "./bower_components/pikaday/css/pikaday.css";';
         container.setAttribute('style', 'width: 257px; height: 216px; margin: 0 auto;')
         shadowRoot.appendChild(style);
         shadowRoot.appendChild(datePicker);

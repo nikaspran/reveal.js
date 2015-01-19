@@ -1,0 +1,22 @@
+<template>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+  </style>
+  <h2>DOM as application <em>context</em></h2>
+
+  <!--@formatter:off-->
+  <pre><code class="html">
+&lt;app-router&gt;
+  &lt;app-route path="/" import="home.html"&gt;&lt;/app-route&gt;
+  &lt;app-route path="/:category" import="category.html"&gt;&lt;/app-route&gt;
+  &lt;app-route path="*" import="404.html"&gt;&lt;/app-route&gt;
+&lt;/app-router&gt;
+  </code></pre>
+  <!--@formatter:on-->
+
+  <!--@formatter:off-->
+  <pre><code class="js">document.querySelector('app-router').go('/personal');</code></pre>
+  <!--@formatter:on-->
+</template>

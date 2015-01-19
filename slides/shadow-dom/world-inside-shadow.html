@@ -1,0 +1,34 @@
+<template>
+  <style>
+    code {
+      font-size: 45px !important;
+    }
+
+    shadow-root-styling {
+      display: block;
+      margin-top: 50px;
+      font-size: 60px;
+    }
+  </style>
+  <h2>Styling does <em>not</em> leak outside shadow DOM</h2>
+  <!--@formatter:off-->
+  <pre><code class="html">
+shadowRoot.innerHTML = '' +
+    '&lt;style&gt;* {color: red !important;}&lt;/style&gt;' +
+    '&lt;span&gt;Only this text is red!&lt;/span&gt;';
+  </code></pre>
+  <!--@formatter:on-->
+  <shadow-root-styling></shadow-root-styling>
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.innerHTML = '' +
+        '<style>* {color: red !important;}</style>' +
+        '<span>Only this text is red!</span>';
+      };
+      document.registerElement('shadow-root-styling', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

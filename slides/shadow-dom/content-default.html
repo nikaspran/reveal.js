@@ -1,0 +1,38 @@
+<template>
+  <style>
+    code {
+      font-size: 60px !important;
+    }
+
+    hello-shadow {
+      display: inline-block;
+      font-size: 100px;
+    }
+  </style>
+  <h2>Shadow root <em>overrides</em> light elements</h2>
+
+  <!--@formatter:off-->
+  <pre><code class="html">&lt;hello-shadow&gt;Hi from the light!&lt;/hello-shadow&gt;</code></pre>
+  <!--@formatter:on-->
+
+  <h4 style="font-size: 80px;"><em>+</em></h4>
+
+  <!--@formatter:off-->
+  <pre><code class="js">shadowRoot.innerHTML = 'Hi from the shadow!';</code></pre>
+  <!--@formatter:on-->
+
+  <h4 style="font-size: 80px"><em>=</em></h4>
+
+  <hello-shadow class="color-black">Hi from the light!</hello-shadow>
+
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.innerHTML = 'Hi from the shadow!';
+      };
+      document.registerElement('hello-shadow', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

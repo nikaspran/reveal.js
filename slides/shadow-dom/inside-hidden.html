@@ -1,0 +1,14 @@
+<template>
+  <style>
+    code {
+      font-size: 70px !important;
+    }
+  </style>
+  <h2>Everything inside is <em>unselectable</em> by default</h2>
+  <!--@formatter:off-->
+  <pre><code class="js">shadowRoot.innerHTML = '&lt;i&gt;Hidden&lt;/i&gt;';</code></pre>
+  <!--@formatter:on-->
+  <!--@formatter:off-->
+  <pre><code class="js">document.querySelector('i'); //null</code></pre>
+  <!--@formatter:on-->
+</template>

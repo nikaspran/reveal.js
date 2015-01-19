@@ -1,0 +1,27 @@
+<script>
+  (function () {
+    'use strict';
+
+    var el = Object.create(HTMLElement.prototype), colors = {
+      'color-orange-light': '#F1662B',
+      'color-orange-dark': '#DC4724',
+      'color-gray-light': '#EFEFEF',
+      'color-gray-dark': '#BFBFBF',
+      'color-black': '#0F0F0F'
+    };
+
+    el.createdCallback = function () {
+      this.style.display = 'none';
+    };
+
+    el.attachedCallback = function () {
+      var host = this.parentNode.host;
+      [].forEach.call(this.attributes, (function (attr) {
+        if (attr.name === 'style') return;
+        host.setAttribute(attr.name, (attr.name === 'data-background' && colors[attr.value]) || attr.value);
+      }));
+    };
+
+    document.registerElement('twc-slide-options', {prototype: el});
+  }());
+</script>

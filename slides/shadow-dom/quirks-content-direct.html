@@ -1,0 +1,29 @@
+<template>
+  <style>
+    twc-feature {
+      min-width: 100px;
+      margin-right: 50px;
+      vertical-align: middle;
+    }
+
+    pre {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1600px;
+    }
+  </style>
+  <h2>Selectors only work for <em>direct</em> children</h2>
+
+  <div>
+    <twc-feature status="false"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;content select="table tr"&gt;&lt;/content&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+  <div>
+    <twc-feature status="true"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;content select="table"&gt;&lt;/content&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+</template>

@@ -1,0 +1,19 @@
+<template>
+  <style>
+    code {
+      font-size: 60px !important;
+    }
+  </style>
+  <h2>Does <em>not</em> have to be in order</h2>
+
+  <!--@formatter:off-->
+  <pre><code class="js">
+var el = document.createElement('x-tabs');
+console.log(el.__proto__); // HTMLElement {...}
+document.registerElement('x-tabs');
+console.log(el.__proto__); // x-tabs {...}
+  </code></pre>
+  <!--@formatter:on-->
+
+  <h2>All works through the power of <span style="text-decoration: line-through">magic</span> maps</h2>
+</template>

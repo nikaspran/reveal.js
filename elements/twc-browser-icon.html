@@ -1,0 +1,36 @@
+<template id="common">
+  <style>
+    img {
+      height: 150px;
+      display: inline-block;
+    }
+  </style>
+</template>
+<template id="chrome">
+  <img src="../res/browser-chrome.png">
+</template>
+<template id="firefox">
+  <img src="../res/browser-firefox.png">
+</template>
+<template id="ie">
+  <img src="../res/browser-ie.png">
+</template>
+<template id="safari">
+  <img src="../res/browser-safari.png">
+</template>
+
+<script>
+  (function () {
+    'use strict';
+
+    var el = Object.create(HTMLElement.prototype), owner = document.currentScript.ownerDocument;
+
+    el.createdCallback = function () {
+      var template = owner.querySelector('#' + this.getAttribute('name')), root = this.createShadowRoot();
+      root.appendChild(document.importNode(owner.querySelector('#common').content, true));
+      root.appendChild(document.importNode(template.content, true));
+    };
+
+    document.registerElement('twc-browser-icon', {prototype: el});
+  }());
+</script>

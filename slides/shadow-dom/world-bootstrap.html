@@ -1,0 +1,21 @@
+<template>
+  <style>
+    .explosion {
+      position: relative;
+    }
+
+    .explosion:before {
+      content: ' ';
+      width: 500px;
+      height: 350px;
+      left: -70px;
+      top: -100px;
+      position: absolute;
+      background: url('../../res/screen-explosion.png') no-repeat center center;
+    }
+  </style>
+  <h2 style="margin-bottom: 50px">Ever tried including a Bootstrap <em>dropdown</em></h2>
+  <img style="height: 120px" src="../../res/screen-bootstrap-button.png">
+
+  <h2 style="margin-top:30px">and then have your layout <em class="explosion">explode</em>?</h2>
+</template>

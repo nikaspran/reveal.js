@@ -1,0 +1,21 @@
+<template>
+  <style>
+    code {
+      font-size: 55px !important;
+    }
+  </style>
+  <h2>2009 called, they want their <em>callbacks</em></h2>
+
+  <!--@formatter:off-->
+  <pre><code class="js">
+var el = Object.create(HTMLElement.prototype);
+
+el.createdCallback = function () {...};
+el.attachedCallback = function () {...};
+el.detachedCallback = function () {...};
+el.attributeChangedCallback = function () {...};
+
+document.registerElement('my-element', {prototype: el});
+  </code></pre>
+  <!--@formatter:on-->
+</template>

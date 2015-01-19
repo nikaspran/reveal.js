@@ -1,0 +1,49 @@
+<template id="common">
+  <style>
+    :host {
+      font-size: 150px;
+      display: inline-block;
+      font-weight: 700;
+    }
+  </style>
+</template>
+<template id="false">
+  <style>
+    :host {
+      color: #dc4724;
+    }
+  </style>
+  ✗
+</template>
+<template id="true">
+  <style>
+    :host {
+      color: #6a8759;
+    }
+  </style>
+  ✓
+</template>
+<template id="maybe">
+  <style>
+    :host {
+      color: #FFDC00;
+    }
+  </style>
+  ✓
+</template>
+
+<script>
+  (function () {
+    'use strict';
+
+    var feature = Object.create(HTMLElement.prototype), owner = document.currentScript.ownerDocument;
+
+    feature.createdCallback = function () {
+      var root = this.createShadowRoot(), template = owner.querySelector('#' + this.getAttribute('status'));
+      root.appendChild(document.importNode(owner.querySelector('#common').content, true));
+      root.appendChild(document.importNode(template.content, true));
+    };
+
+    document.registerElement('twc-feature', {prototype: feature});
+  }());
+</script>

@@ -1,0 +1,57 @@
+<template>
+  <style>
+    code {
+      font-size: 40px !important;
+    }
+
+    img {
+      height: 150px;
+    }
+
+    [is=quack-button] {
+      outline: none;
+      margin-top: 40px;
+      font-size: 50px !important;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: transform .1s linear;
+    }
+
+    [is=quack-button]:hover {
+      transform: scale(1.1);
+    }
+    [is=quack-button]:active {
+      transform: scale(.9);
+    }
+  </style>
+
+  <h2>Let’s make a <em>quacking</em> button</h2>
+
+  <!--@formatter:off-->
+  <pre><code class="js">
+var el = Object.create(HTMLButtonElement.prototype);
+el.createdCallback = function () {
+  ...
+  this.addEventListener('click', function () { sound.play() });
+};
+document.registerElement('quack-button', {prototype: el, extends: 'button'});
+  </code></pre>
+  <!--@formatter:on-->
+
+  <button is="quack-button"><img src="../../res/logo-duck.svg"></button>
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLButtonElement.prototype);
+      el.createdCallback = function () {
+        var sound = document.createElement('audio');
+        sound.setAttribute('src', '../../res/sound-quack-quack.wav');
+        sound.setAttribute('preload', 'auto');
+        this.addEventListener('click', function () {
+          sound.play();
+        });
+      };
+      document.registerElement('quack-button', {prototype: el, extends: 'button'});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

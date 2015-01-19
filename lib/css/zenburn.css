@@ -1,0 +1,117 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+html /deep/ .hljs {
+  display: block; padding: 0.5em;
+  background: #3F3F3F;
+  color: #DCDCDC;
+}
+
+html /deep/ .hljs-keyword,
+html /deep/ .hljs-tag,
+html /deep/ .css .hljs-class,
+html /deep/ .css .hljs-id,
+html /deep/ .lisp .hljs-title,
+html /deep/ .nginx .hljs-title,
+html /deep/ .hljs-request,
+html /deep/ .hljs-status,
+html /deep/ .clojure .hljs-attribute {
+  color: #E3CEAB;
+}
+
+.django .hljs-template_tag,
+.django .hljs-variable,
+.django .hljs-filter .hljs-argument {
+  color: #DCDCDC;
+}
+
+html /deep/ .hljs-number,
+html /deep/ .hljs-date {
+  color: #8CD0D3;
+}
+
+html /deep/ .dos .hljs-envvar,
+html /deep/ .dos .hljs-stream,
+html /deep/ .hljs-variable,
+html /deep/ .apache .hljs-sqbracket {
+  color: #EFDCBC;
+}
+
+html /deep/ .dos .hljs-flow,
+html /deep/ .diff .hljs-change,
+html /deep/ .python .exception,
+html /deep/ .python .hljs-built_in,
+html /deep/ .hljs-literal,
+html /deep/ .tex .hljs-special {
+  color: #EFEFAF;
+}
+
+html /deep/ .diff .hljs-chunk,
+html /deep/ .hljs-subst {
+  color: #8F8F8F;
+}
+
+html /deep/ .dos .hljs-keyword,
+html /deep/ .python .hljs-decorator,
+html /deep/ .hljs-title,
+html /deep/ .haskell .hljs-type,
+html /deep/ .diff .hljs-header,
+html /deep/ .ruby .hljs-class .hljs-parent,
+html /deep/ .apache .hljs-tag,
+html /deep/ .nginx .hljs-built_in,
+html /deep/ .tex .hljs-command,
+html /deep/ .hljs-prompt {
+    color: #efef8f;
+}
+
+html /deep/ .dos .hljs-winutils,
+html /deep/ .ruby .hljs-symbol,
+html /deep/ .ruby .hljs-symbol .hljs-string,
+html /deep/ .ruby .hljs-string {
+  color: #DCA3A3;
+}
+
+html /deep/ .diff .hljs-deletion,
+html /deep/ .hljs-string,
+html /deep/ .hljs-tag .hljs-value,
+html /deep/ .hljs-preprocessor,
+html /deep/ .hljs-pragma,
+html /deep/ .hljs-built_in,
+html /deep/ .sql .hljs-aggregate,
+html /deep/ .hljs-javadoc,
+html /deep/ .smalltalk .hljs-class,
+html /deep/ .smalltalk .hljs-localvars,
+html /deep/ .smalltalk .hljs-array,
+html /deep/ .css .hljs-rules .hljs-value,
+html /deep/ .hljs-attr_selector,
+html /deep/ .hljs-pseudo,
+html /deep/ .apache .hljs-cbracket,
+html /deep/ .tex .hljs-formula,
+html /deep/ .coffeescript .hljs-attribute {
+  color: #CC9393;
+}
+
+html /deep/ .hljs-shebang,
+html /deep/ .diff .hljs-addition,
+html /deep/ .hljs-comment,
+html /deep/ .java .hljs-annotation,
+html /deep/ .hljs-template_comment,
+html /deep/ .hljs-pi,
+html /deep/ .hljs-doctype {
+  color: #7F9F7F;
+}
+
+html /deep/ .coffeescript .javascript,
+html /deep/ .javascript .xml,
+html /deep/ .tex .hljs-formula,
+html /deep/ .xml .javascript,
+html /deep/ .xml .vbscript,
+html /deep/ .xml .css,
+html /deep/ .xml .hljs-cdata {
+  opacity: 0.5;
+}
+

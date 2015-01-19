@@ -1,0 +1,66 @@
+<template>
+  <style>
+    h2 {
+      margin-bottom: 40px !important;
+    }
+
+    pre {
+      width: 70%;
+      display: inline-block;
+    }
+
+    h3 {
+      display: inline-block;
+      margin-right: 25px !important;
+      min-width: 200px;
+      text-align: right;
+    }
+
+    code {
+      font-size: 48px !important;
+    }
+
+    shadow-not-shadow {
+      display: inline-block;
+      font-size: 60px;
+      color: black;
+    }
+  </style>
+  <h2>The stuff we move is still considered <em>light</em></h2>
+
+  <div>
+    <h3><em>Global</em></h3>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;style&gt;i {text-decoration: underline}&lt;/style&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+
+  <h4 style="font-size: 80px;"><em>+</em></h4>
+
+  <div>
+    <h3><em>Shadow</em></h3>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;style&gt;i {color: red}&lt;/style&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+
+  <h4 style="font-size: 80px;"><em>=</em></h4>
+
+  <style>
+    i {
+      text-decoration: underline
+    }
+  </style>
+
+  <shadow-not-shadow><i>Not shadow</i></shadow-not-shadow>
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.innerHTML = '<style>i {color: red}</style><i>Shadow</i> <content></content>!';
+      };
+      document.registerElement('shadow-not-shadow', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

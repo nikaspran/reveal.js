@@ -1,0 +1,24 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 40 400 200">
+    <marker id="triangle" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="4"
+            markerHeight="3" orient="auto">
+      <path fill="#F1662B" d="M 0 0 L 10 5 L 0 10 z"/>
+    </marker>
+    <polyline stroke="#F1662B" points="100 100 300 100" marker-end="url(#triangle)" stroke-width="7"/>
+  </svg>
+</template>
+
+<script>
+  (function () {
+    'use strict';
+
+    var el = Object.create(HTMLElement.prototype), owner = document.currentScript.ownerDocument;
+
+    el.createdCallback = function () {
+      var root = this.createShadowRoot(), template = owner.querySelector('template');
+      root.appendChild(document.importNode(template.content, true));
+    };
+
+    document.registerElement('twc-arrow', {prototype: el});
+  }());
+</script>

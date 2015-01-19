@@ -1,0 +1,110 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import "../template/fonts";
+
+$color-orange-light: #F1662B;
+$color-orange-dark: #DC4724;
+$color-gray-light: #EFEFEF;
+$color-gray-dark: #BFBFBF;
+$color-black: #0F0F0F;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $color-gray-light;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
+
+::shadow {
+  //TODO:replace with /deep/
+  .stroke-orange-light {
+    stroke: $color-orange-light;
+  }
+  .fill-orange-light {
+    fill: $color-orange-light;
+  }
+  .color-orange-light {
+    color: $color-orange-light;
+  }
+  .color-orange-dark {
+    color: $color-orange-dark;
+  }
+  .color-gray-light {
+    color: $color-gray-light;
+  }
+  .color-gray-dark {
+    color: $color-gray-dark;
+  }
+  .color-black {
+    color: $color-black;
+  }
+  .font-roboto {
+    font-family: 'Roboto', serif;
+  }
+  h2, h3, h4, li, q {
+    color: $color-black;
+    em {
+      color: $color-orange-light;
+      font-style: normal;
+    }
+  }
+  pre {
+    margin: 0;
+    code {
+      text-align: left;
+      font-family: "Source Code Pro", monospace;
+      font-size: 70px;
+    }
+  }
+
+  h1 {
+    font-weight: 400;
+  }
+  h2, h3, h4 {
+    font-weight: 700;
+  }
+  h1, h2, h3, h4 {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  h2 {
+    font-size: 90px;
+
+    & + pre {
+      margin-top: 40px;
+    }
+  }
+  pre + pre {
+    margin-top: 40px;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+

@@ -1,0 +1,50 @@
+<template>
+  <style>
+    code {
+      font-size: 40px !important;
+      width: 60%;
+      float: left;
+      margin-left: 50px;
+    }
+    ul {
+      position: absolute;
+      left: 60%;
+      top: 30%;
+      margin-left: 100px;
+      list-style: none;
+      font-size: 80px !important;
+      text-align: left;
+      line-height: 1.5em;
+    }
+    li:before {
+      content: '&';
+      font-family: 'Lato', sans-serif;
+      margin: 0 .2em;
+    }
+  </style>
+
+  <h2>But so, so <em>tedious</em></h2>
+  <!--@formatter:off-->
+  <pre><code class="js">
+this.innerHTML = '' +
+  '&lt;table&gt;' +
+  '&lt;tr&gt;' +
+    '&lt;td&gt;Meaning of Life&lt;/td&gt;' +
+    '&lt;td&gt;42&lt;/td&gt;' +
+    '&lt;/tr&gt;' +
+  '&lt;tr&gt;' +
+    '&lt;td&gt;Quarter Life Crisis&lt;/td&gt;' +
+    '&lt;td&gt;24&lt;/td&gt;' +
+    '&lt;/tr&gt;' +
+  '&lt;/table&gt;';
+  </code></pre>
+  <!--@formatter:on-->
+
+  <ul>
+    <li><em>unreadable</em></li>
+
+    <li><em>bland</em></li>
+
+    <li><em>buggy</em></li>
+  </ul>
+</template>

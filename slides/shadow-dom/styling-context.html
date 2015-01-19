@@ -1,0 +1,58 @@
+<template>
+  <style>
+    pre {
+      width: 1100px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .example {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    category-row {
+      font-size: 50px;
+    }
+
+  </style>
+  <h2>Styling for <em>context</em>:</h2>
+  <!--@formatter:off-->
+  <pre><code class="css">
+:host {}
+:host(:hover) {}
+:host(div) {}
+:host-context(ol) {}
+:host-context(ul) {}
+  </code></pre>
+  <!--@formatter:on-->
+
+  <div class="example">
+    <ol style="display: block">
+      <category-row class="color-orange-dark">&lt;ol&gt; row</category-row>
+      <category-row class="color-orange-dark">Another &lt;ol&gt; row</category-row>
+    </ol>
+
+    <ul style="display: block">
+      <category-row class="color-orange-light">&lt;ul&gt; row</category-row>
+      <category-row class="color-orange-light">Another &lt;ul&gt; row</category-row>
+    </ul>
+  </div>
+
+  <script>
+    (function (document) {
+      var el = Object.create(HTMLElement.prototype);
+      el.createdCallback = function () {
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.innerHTML = '' +
+        '<style>:host-context(ol) div:before {content: "#"}</style>' +
+        '<style>:host-context(ol) div {text-align: right}</style>' +
+        '<style>:host-context(ul) div:before {content: ">"}</style>' +
+        '<style>:host-context(ul) div {text-align: left}</style>' +
+        '<style>div:before {margin-right: .5em;}</style>' +
+        '<div><content></content></div>';
+      };
+      document.registerElement('category-row', {prototype: el});
+    }(document.currentScript.ownerDocument));
+  </script>
+</template>

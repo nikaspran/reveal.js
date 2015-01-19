@@ -1,0 +1,36 @@
+<template>
+  <style>
+    twc-feature {
+      min-width: 100px;
+      margin-right: 50px;
+      vertical-align: middle;
+    }
+
+    pre {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1550px;
+    }
+
+    code {
+      font-size: 60px !important;
+    }
+  </style>
+  <h2>Can't <em>&lt;link&gt;</em> stylesheets</h2>
+
+  <div>
+    <twc-feature status="false"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+
+  <div>
+    <twc-feature status="true"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code class="html">&lt;style&gt;@import "styles.css"&lt;/style&gt;</code></pre>
+    <!--@formatter:on-->
+  </div>
+
+  <h2>Better yet, just <em>preprocess</em>!</h2>
+</template>

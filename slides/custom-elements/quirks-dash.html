@@ -1,0 +1,30 @@
+<template>
+  <style>
+    twc-feature {
+      min-width: 100px;
+      margin-right: 50px;
+      vertical-align: middle;
+    }
+
+    pre {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1550px;
+    }
+  </style>
+  <h2>The name must have a <em>dash</em></h2>
+
+  <div>
+    <twc-feature status="true"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code>document.registerElement('x-tabs');</code></pre>
+    <!--@formatter:on-->
+  </div>
+
+  <div>
+    <twc-feature status="false"></twc-feature>
+    <!--@formatter:off-->
+    <pre><code>document.registerElement('tabs');</code></pre>
+    <!--@formatter:on-->
+  </div>
+</template>

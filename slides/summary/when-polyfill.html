@@ -1,0 +1,67 @@
+<template>
+  <style>
+    td {
+      padding: 0 30px;
+    }
+
+    table {
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    img {
+      height: 120px;
+    }
+
+    twc-feature {
+      line-height: 0.5em;
+      font-size: 120px;
+    }
+
+    twc-browser-icon::shadow img {
+      height: 100px;
+    }
+  </style>
+  <h2>With <em>polyfills</em>:</h2>
+  <!--@formatter:off-->
+  <table>
+    <tbody>
+    <tr>
+      <th></th>
+      <th><twc-browser-icon name="chrome"></twc-browser-icon></th>
+      <th><twc-browser-icon name="firefox"></twc-browser-icon></th>
+      <th><twc-browser-icon name="safari"></twc-browser-icon></th>
+      <th><twc-browser-icon name="ie"></twc-browser-icon></th>
+    </tr>
+    <tr>
+      <td><img src="../../res/logo-custom-elements.svg"></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+    </tr>
+    <tr>
+      <td><img src="../../res/logo-templates.svg"></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+    </tr>
+    <tr>
+      <td><img src="../../res/logo-shadow-dom.svg"></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="maybe"></twc-feature></td>
+      <td><twc-feature status="maybe"></twc-feature></td>
+      <td><twc-feature status="maybe"></twc-feature></td>
+    </tr>
+    <tr>
+      <td><img src="../../res/logo-html-imports.svg"></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+      <td><twc-feature status="true"></twc-feature></td>
+    </tr>
+    </tbody>
+  </table>
+  <!--@formatter:on-->
+</template>

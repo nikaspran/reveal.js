@@ -1,8 +1,8 @@
 {
-  "name": "Web Components: The (near) Future of Web Development",
+  "name": "talk-web-components",
   "version": "1.0.0",
-  "description": "An introduction to Web Components",
-  "homepage": "http://nikas.praninskas.com",
+  "description": "Web Components: The (near) Future of Web Development",
+  "homepage": "http://nikas.praninskas.com/talk-web-components",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve"

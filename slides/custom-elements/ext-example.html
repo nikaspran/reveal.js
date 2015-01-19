@@ -39,13 +39,13 @@ document.registerElement('quack-button', {prototype: el, extends: 'button'});
   </code></pre>
   <!--@formatter:on-->
 
-  <button is="quack-button"><img src="../../res/logo-duck.svg"></button>
+  <button is="quack-button"><img src="./res/logo-duck.svg"></button>
   <script>
     (function (document) {
       var el = Object.create(HTMLButtonElement.prototype);
       el.createdCallback = function () {
         var sound = document.createElement('audio');
-        sound.setAttribute('src', '../../res/sound-quack-quack.wav');
+        sound.setAttribute('src', './res/sound-quack-quack.wav');
         sound.setAttribute('preload', 'auto');
         this.addEventListener('click', function () {
           sound.play();
